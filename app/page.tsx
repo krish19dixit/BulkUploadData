@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation"
 import { Globe, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { WorldMapDemo } from "@/components/world-map-demo"
+import { FooterDemo } from "@/components/footer-demo"
 
 export default function HomePage() {
   const router = useRouter()
@@ -135,6 +137,9 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950/50 to-transparent pointer-events-none" />
       </section>
 
+      {/* WorldMapDemo Section */}
+      <WorldMapDemo />
+
       {/* Bottom Section */}
       <div className="flex justify-center items-center py-12 gap-3 bg-slate-900/50 border-t border-red-500/20">
         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-red-500/30">
@@ -142,6 +147,9 @@ export default function HomePage() {
           <span className="text-gray-300 text-sm">Combining AI With Human Expertise</span>
         </div>
       </div>
+
+      {/* FooterDemo Component */}
+      <FooterDemo />
     </main>
   )
 }
